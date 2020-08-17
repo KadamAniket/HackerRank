@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HackerRank
+{
+    public class CountingValleys
+    {
+        // Complete the countingValleys function below.
+        static int countingValleys(int n, string s)
+        {
+            int valleyCount = 0;
+            int depthCounter = 0;
+            
+            for(int i=0;i< n; i++)
+            {
+                if (s[i] == 'D')
+                {
+                    depthCounter++;
+                }else if(s[i] == 'U')
+                {
+                    depthCounter--;
+                }
+
+                if (depthCounter == 0 && s[i]=='U')
+                {
+                    valleyCount++;
+                }
+          
+            }
+
+
+            return valleyCount;
+
+        }
+
+        public static void calculate()
+        {
+            Console.WriteLine(countingValleys(8, "UDDDUDUU"));
+            Console.WriteLine(countingValleys(12, "DDUUDDUDUUUD"));
+            Console.WriteLine(countingValleys(8, "DDUUUUDD"));
+
+            Console.WriteLine(countingValleys(1000, "UUUUDUUDDDDDUUUDDUUDUDDDUUDUDUDDUDUDDUUUDDDUDDUDDDDDUUUDDUUDDDDDDDDDDDUUDDDDDDUUUUDUDUDDDDUDUDUUUDUDDDDUUDDDDDDDUUUUUUUDDUUUUUDUUUDUDUDDDDUUDDUDDDDDUDUDUDDDDUUDUDUDDUUDDDDDUDDUUUUDDDUUUDUUUUDUUDUDUDUUDUUDDDUDDUDDDDDDDUUDDUDDDDDUDUDDDUUDUDUDDUUUUUUDDUDDDDUDUDDDUDDDUUUUDDDDDDDUUDDDDUDUDUDDUUDDUUDUUDUUDDDUUUDDDDUDDDUDUDUDUUUDUDUDUDUUUUDDDUUDUUUUDUUDDUUDUDUDDUDDDDUUDDDDUDDUUUDUUDUDDDUUUDUUDDDUDUDUUDUUUUUDDDUUUUUDDDUUDDUDDDUUUUUUUUDDDUUDUDUUDUUDUDUUDDDDDUUUUDUDDUUUDUDDDDUUDUUUDUUUDDDDUUDDUUDUUUDDUDDUDDUDDUUDDDUDUUUUUUUDDDUDUDDUUUUUDDUDUDDDDDUDDDUDUDUDDDDDDDDUUDDUDUUUUDUUUDUUDDUUUDDDUUDUUDDUDUDDUUUUUUUDDUDDUDUDDDUUDUUUDDUUDDDDUUUUUDDUUDDDUUUDDDUUDDDDDUDUUUDDUDUDDUDDUUDDDDDUUUUDUDUUUUUUDUUDUUUDDUUUUUUDDDDUDUDUUDUDDDUUDDDUUUUUDDDDDUDUDDDDDUUDDDUDUUUDDDUUUUDDUUUUUUUDUDDUUDDUDDDDDDDDDDDUDUDUUDDDDUDUUUDUDUUDUUUDDDDDUUDUDUUUDDUDUUUUDDUUDDUDDUDUUUDDUDUUDUDUUDDDDDDUUDUDDDUUUUDDDDUUUUUDDUUUDUUDUUDUUUUDDUDDUDDUDUUUDDUDDDDDUUDDUDUUDUUDUUDUDUUDDUUDUDUUUUDUUDDDDUUDDUUDUUUDDUUUDUDDUUUUUUUUUUUUUUUUUUUUUUUU"));
+
+            
+        }
+    }
+}
