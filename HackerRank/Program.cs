@@ -10,8 +10,6 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             //HourGlassSum hgs = new HourGlassSum();
             //hgs.showHourGlass();
 
@@ -88,7 +86,9 @@ namespace HackerRank
 
             // CirularArrayRotation.calcualte();
 
-            ACMICPCTeam.calculate();
+            // ACMICPCTeam.calculate();
+
+            HallowenSale.calculate();
 
             Console.ReadKey();
         }
